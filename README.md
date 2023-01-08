@@ -1,0 +1,4 @@
+[✅] createAction()
+[✅] createReducer()
+[✅] createSlice()
+[✅] configureStore()
