@@ -1,16 +1,16 @@
-import { useSelector, useDispatch} from "react-redux";
-import { increment, decrement } from "./store";
+import {FilterTodo} from './features/Filters/Filter';
+import {NewTodo} from './features/Todos/NewTodo'
+import {TodoList} from './features/Todos/TodoList'
+import {ResetApp} from './features/Reset/ResetApp';
 
-function App() {
-  const count = useSelector(state => state)
-  const dispatch = useDispatch()
+export default function App() {
   return (
     <div className="App">
-      {count}
-      <button onClick={() => dispatch(increment())}>plus</button>
-      <button onClick={() => dispatch(decrement())}>minus</button>
+      <h1>Hello Redux Todo</h1>
+      <NewTodo />
+      <FilterTodo />
+      <TodoList />
+      <ResetApp />
     </div>
   );
 }
-
-export default App;
